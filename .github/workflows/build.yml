@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build manager
+        shell: powershell
+        run: .\Build.ps1
+      - name: Run integration tests
+        shell: powershell
+        run: .\tests\Run-IntegrationTests.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VlcPatchManager
+          path: dist/VlcPatchManager.exe
