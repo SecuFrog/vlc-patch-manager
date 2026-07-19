@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "updatedUtc": "2026-07-19T00:00:00Z",
+  "patches": [
+    {
+      "id": "native-torrent-vlc-3.0.23-x64",
+      "name": "Native Torrent Playback",
+      "description": "Runs libtorrent inside VLC. No HTTP server or helper player. VLC 3 preview links use magnet://? instead of magnet:?.",
+      "patchVersion": "0.1.0-preview.1",
+      "vlcVersion": "3.0.23.0",
+      "architecture": "x64",
+      "downloadUrl": "https://raw.githubusercontent.com/SecuFrog/vlc-patch-manager/main/patches/vlc-torrent-plugin-vlc-3.0.23-x64-preview.zip",
+      "packageSha256": "A47361B2EF5DFF6A7766715DA4BE9BA5CCDE9AF1C9BCB704345770FCC3B3F5C4",
+      "payloadEntry": "payload/libtorrent_plugin.dll",
+      "relativeTarget": "plugins/access/libtorrent_plugin.dll",
+      "cacheMarker": "libtorrent_plugin.dll"
+    }
+  ]
+}
